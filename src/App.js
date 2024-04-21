@@ -1,26 +1,19 @@
+
+import { useState, useEffect } from 'react';
 import './App.css';
 
-const Person = (props) => {
-  return (
-    <>
-      <h1>First Name: {props.name}</h1>
-      <h2>Last Name: {props.lastname}</h2>
-      <h2>Age: {props.age}</h2>
-    </>
-  );
-}
-
 const App = () => {
+  const[counter, setCounter] = useState(0);
+
+  useEffect(()=>{
+    setCounter(0);
+  }, []);
+
   return (
     <div className="App">
-      <Person 
-        name ='John' 
-        lastname = 'Doe' 
-        age = '30'/>
-      <Person 
-        name ='Jane' 
-        lastname = 'Doe' 
-        age = '24'/>
+    <button onClick={() => setCounter((prevCount)=> prevCount - 1)}>-</button>
+    <h1>{counter}</h1>
+    <button onClick={() => setCounter((prevCount)=> prevCount + 1)}>+</button> 
     </div>
   );
 }

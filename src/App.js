@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+  const name = 'Eper';
+  const isNameShowing = true;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello, {2 + 2}!</h1>
+      {name ? (
+        <>
+        test
+        </>
+      ) : (
+        <>
+          <h1> test </h1>
+          <h2>There is no name.</h2>
+        </>
+      )}
     </div>
   );
 }

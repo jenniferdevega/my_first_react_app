@@ -1,22 +1,26 @@
 import './App.css';
 
-const App = () => {
-  const name = 'Eper';
-  const isNameShowing = true;
+const Person = (props) => {
+  return (
+    <>
+      <h1>First Name: {props.name}</h1>
+      <h2>Last Name: {props.lastname}</h2>
+      <h2>Age: {props.age}</h2>
+    </>
+  );
+}
 
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello, {2 + 2}!</h1>
-      {name ? (
-        <>
-        test
-        </>
-      ) : (
-        <>
-          <h1> test </h1>
-          <h2>There is no name.</h2>
-        </>
-      )}
+      <Person 
+        name ='John' 
+        lastname = 'Doe' 
+        age = '30'/>
+      <Person 
+        name ='Jane' 
+        lastname = 'Doe' 
+        age = '24'/>
     </div>
   );
 }
